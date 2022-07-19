@@ -390,7 +390,7 @@ box-shadow: 2px 0 1px 1px white;
 box-shadow: 0 -2px 1px 1px white;
 }
 }
-.menu-favs{
+.menu-share{
 border-right: none;
 border-radius: 50px 0 0 50px;
 top:60px;
@@ -414,12 +414,12 @@ border-radius: 50px 0 0 50px;
 top:110px;
 right: 0px
 }
-.menu-share{
+/*.menu-share{
 border-right: none;
 border-radius: 50px 0 0 50px;
 top:160px;
 right: 0px
-}
+}*/
 .menu-rate{
 border-right: none;
 border-radius: 50px 0 0 50px;
@@ -450,7 +450,7 @@ border-radius: 50px 0 0 50px;
 top: 10px;
 right: 0px
 }
-.menu-fs{
+.menu-favvs{
 display:;
 border-left: none;
 border-radius: 0 50px 50px 0;
