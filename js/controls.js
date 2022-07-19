@@ -265,7 +265,7 @@ $("#menu-fvvs").hide();
 $("#menu-share").hide();
 }
 
-$("#menu-share").html("<img style='margin: 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/email.png' id = 'emailshare'/><img style='margin: 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/fb.png' id = 'fbshare'/><img style='margin: 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/whatsapp.png' id = 'whashare'/>");
+$("#menu-share").html("<img style='margin: 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/email.png' id = 'emailshare'/><!--img style='margin: 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/fb.png' id = 'fbshare'/--><img style='margin: 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/whatsapp.png' id = 'whashare'/>");
 
 var pgurl = encodeURIComponent("https://anthonymuthomi.github.io");
 
