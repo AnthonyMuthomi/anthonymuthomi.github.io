@@ -267,23 +267,23 @@ $("#menu-share").hide();
 
 $("#menu-share").html("<img style='margin: 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/email.png' id = 'emailshare'/><img style='margin: 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/fb.png' id = 'fbshare'/><img style='margin: 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/whatsapp.png' id = 'whashare'/>");
 
-var pgurl = encodeURIComponent("https://some.site.com/bvg");
+var pgurl = encodeURIComponent("https://anthonymuthomi.github.io");
 
-var subj = encodeURIComponent("Download and Install Bible Verse Game");
+var subj = encodeURIComponent("Play Bible Verse Game");
 
 $("#fbshare").click(function(){
 window.location.href = "https://www.facebook.com/sharer/sharer.php?u=" + pgurl;
 });
 
 $("#emailshare").click(function(){
-window.location.href = "mailto:?Subject=" + subj + "&body=Hi. Download and install Bible Verse Game here, " + pgurl;
+window.location.href = "mailto:?Subject=" + subj + "&body=Hi. Play Bible Verse Game here, " + pgurl;
 });
 $("#whashare").click(function(){
-window.location.href = "https://api.whatsapp.com/send?text=Hi. Download and install Bible Verse Game here, " + pgurl;
+window.location.href = "https://api.whatsapp.com/send?text=Hi. Play Bible Verse Game here, " + pgurl;
 });
 
 var opensharemenu = function(){
-/**
+
 playClickSd();
 $("#dark").show();
 $("#menu-cont").show();
@@ -296,7 +296,7 @@ $("#menu-settings").hide();
 $("#menu-statistics").hide();
 $("#menu-about").hide();
 $("#menu-fvvs").hide();
-**/
+
 }
 
 $("textarea").on("input", function () {
@@ -315,7 +315,7 @@ if(txt != ""){
 txt = encodeURIComponent(txt);
 
 $("#fb-txt").val("");
-//window.location.href = "mailto:?Subject=" + subj + "&body=" + txt;
+window.location.href = "mailto:anthonymuthomih@gmail.com?Subject=" + subj + "&body=" + txt;
 }
 });
 
