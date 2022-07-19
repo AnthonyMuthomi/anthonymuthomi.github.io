@@ -305,6 +305,7 @@ if(mus == "1"){
 document.getElementById("bgm").play();
 }
 }
+playMusic();
 
 var playClickSd = function(e){
 if(sd == "1"){
