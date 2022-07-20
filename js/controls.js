@@ -162,11 +162,42 @@ var positionsfav = [];
 for(var i = 0; i < maxnol; i++){
 var bkastxt = fvrefs[i].replace(fvrefs[i][0], booksArray[parseInt(fvrefs[i][0])-1]);
 
+var refschd = bkastxt.substring((bkastxt.lastIndexOf(" ")+1), bkastxt.length);
+
+var bkschd = bkastxt.substring(0, bkastxt.lastIndexOf(" "));
+
+var vstxtschd = get_verse(bkschd, refschd).toLowerCase();
+
 if(bkastxt.toLowerCase().indexOf(textsch)>-1){
+
 count++;
+
 favssch.push(bkastxt);
+
 offs.push(Math.floor(i/5));
+
 positionsfav.push(i);
+
+}else if(vstxtschd.indexOf(textsch)>-1){
+
+count++;
+
+favssch.push(bkastxt);
+
+offs.push(Math.floor(i/5));
+
+positionsfav.push(i);
+
+}else{
+
+var count = 0;
+
+var favssch = [];
+
+var offs = [];
+
+var positionsfav = [];
+
 }
 }
 
