@@ -137,7 +137,7 @@ var refpts = ref.split(":");
 var chapt = refpts[0];
 var vsno = refpts[1];
 
-ftxt += "<span id='read_more' onclick='scrollToVerse(\""+bk+"\", "+chapt+", "+vsno+");' style='border-radius: 5px; font-weight: bold; background: white; color:black; width:wrap-content; font-size: 12px; padding: 6px;height:15px; margin-left:10px;'><img style='border-radius: 5px; width:16px; height:16px;margin-right:5px;' src='./images/others/bg0.png'/>Read More</span>";
+ftxt += "<span onclick='scrollToVerse(\""+bk+"\", "+chapt+", "+vsno+");' style='border-radius: 5px; font-weight: bold; background: white; color:black; width:wrap-content; font-size: 12px; padding: 6px;height:15px; margin-left:10px;'><img style='border-radius: 5px; width:16px; height:16px;margin-right:5px;' src='./images/others/bg0.png'/>Read More</span>";
 
 ftxt += '</td></tr><tr><td ';
 
