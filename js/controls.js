@@ -42,6 +42,106 @@ return vt;
 
 /**open favs**/
 
+var getBookDbdc = function(b){
+
+b = b.toLowerCase();
+
+if(b.indexOf(" ") == -1){
+
+return b;
+
+}else if(b == "songs of solomon"){
+
+return "songsofsolomon";
+
+}else{
+
+b = b.split(" ");
+
+return b[1]+b[0];
+
+}
+
+}
+
+var get_verse_textc = function(bk, chap, vs){
+
+bk = getBookDbd(bk);
+
+var data = window[bk];
+
+data = data.substring(data.indexOf("*")-0+1, data.length);
+
+var chaps_arr = [];
+
+var chap_idx = 1;
+
+while(data != ""){
+
+if(data.indexOf("*") != -1){
+
+var chap_text = data.substring(0, data.indexOf("*")-0+1).replace("*", "");
+
+var init = chap_text.substring(0, chap_text.indexOf("."));
+
+chap_text = chap_text.replace(init, "1");
+
+chap_text = "<b style='color: black; background:white'>CHAPTER "+ chap_idx + "</b><br/>" + chap_text+"<br/>";
+
+chaps_arr.push(chap_text);
+
+data = data.replace(data.substring(0, data.indexOf("*")-0+1),"");
+
+chap_idx++;
+
+}else{
+
+var init = data.substring(0, data.indexOf("."));
+
+data = data.replace(init, "1");
+
+var chap_text = "<b style='color: black; background:white'>CHAPTER "+ chap_idx + "</b><br/>" + data +"<br/>";
+
+chaps_arr.push(chap_text);
+
+data = "";
+
+}
+
+}
+
+var vs_text = "";
+
+for(var i = 0; i < chaps_arr.length; i++){
+
+if(chap == (i-0+1)){
+
+var waste = chaps_arr[i].substring(0, chaps_arr[i].indexOf("<br/>"));
+
+chaps_arr[i] = chaps_arr[i].replace(waste, "");
+
+var stt = chaps_arr[i].indexOf(vs);
+
+var nd = chaps_arr[i].length;
+
+if(chaps_arr[i].indexOf(vs-0+1) != -1){
+
+nd = chaps_arr[i].indexOf(vs-0+1);
+
+}
+
+vs_text = chaps_arr[i].substring(stt, nd);
+
+vs_text = vs_text.substring(vs_text.indexOf(".")-0+1, vs_text.length);
+
+}
+
+}
+
+return vs_text;
+
+}
+
 var setAllFavsText = function(off, mkvs){
 favs = favs.replaceAll("\n", "");
 var fvrefs = favs.split(",");
@@ -75,7 +175,18 @@ var bk = booksArray[bcp[0]-1];
 var ref = bcp[1];
 
 //verse txt
-var verse_txt = get_verse(bk, ref);
+  var vrss = ref;
+
+var vrss_arr = vrss.split(":");
+
+var chapt = vrss_arr[0];
+
+var vsno = vrss_arr[1];
+
+var verse_text = get_verse_text(bk, chapt, vsno);
+
+//var verse_txt = get_verse_textc(bk, );
+    //get_verse(bk, ref);
 var data = verse_txt;
 
 ftxt += '<tr><td ';
