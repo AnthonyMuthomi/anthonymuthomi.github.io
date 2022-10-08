@@ -324,8 +324,7 @@ $("#menu-fvvs").hide();
 $("#menu-share").hide();
 }
 
-$("#menu-share").html("<img style='margin: 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/email.png' id = 'emailshare'/><!--img style='margin: 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/fb.png' id = 'fbshare'/--><img style='margin: 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/whatsapp.png' id = 'whashare'/>");
-
+$("#menu-share").html("<div style='display:inline-flex; flex-direction:column; align-items:center; justify-content:center'><img style='margin: 20px 20px 5px 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/email.png' id = 'emailshare'/><b style='color:white'>Email</b></div><div style='display:inline-flex; flex-direction:column; align-items:center; justify-content:center'><img style='margin: 20px 20px 5px 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/fb.png' id = 'fbshare'/><b style='color:white'>Facebook</b></div><div style='display:inline-flex; flex-direction:column; align-items:center; justify-content:center'><img style='margin: 20px 20px 5px 20px; width: 50px; height: 50px; border-radius:50%; border: 2px dotted white' src='./images/icon/whatsapp.png' id = 'whashare'/><b style='color:white'>Whatsapp</b></div>");
 var pgurl = encodeURIComponent("https://anthonymuthomi.github.io");
 
 var subj = encodeURIComponent("Play Bible Verse Game");
