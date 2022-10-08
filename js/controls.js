@@ -331,7 +331,7 @@ var pgurl = encodeURIComponent("https://anthonymuthomi.github.io");
 var subj = encodeURIComponent("Play Bible Verse Game");
 
 $("#fbshare").click(function(){
-window.location.href = "https://www.facebook.com/sharer/sharer.php?u=" + pgurl;
+window.location.href = "https://www.facebook.com/sharer/sharer.php?u=Hello. Play the Bible Verse Game here " + pgurl;
 });
 
 $("#emailshare").click(function(){
